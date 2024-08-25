@@ -66,6 +66,10 @@ app.use((req, res, next) => {
 // Use the pointsRoutes for handling requests to the "/points" endpoint.
 app.use("/points", pointsRoutes)
 
+app.get("/", (req, res) =>{
+    res.send("hello")
+})
+
 // Start the server and listen on the specified port.
 app.listen(PORT, ()=> {
     console.log(`server is running on port ${PORT}`)
